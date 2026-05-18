@@ -27,7 +27,9 @@ git push -u origin main
 
 > işine yarar `dotnet new gitignore`
 
-# ci.yaml
+#  ci.yaml
+
+Kökte `.github/workflows` altına konulur bu dosya
 *Tüm bu işlemler saniyeler içinde olup bitecek ve sonra o sunucu yok edilecek.*
 
 ```
