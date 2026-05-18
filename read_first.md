@@ -29,3 +29,9 @@ git push -u origin main
 
 # ci.yaml
 *Tüm bu işlemler saniyeler içinde olup bitecek ve sonra o sunucu yok edilecek.*
+
+```
+git add .
+git commit -m "feat: CI pipeline eklendi"
+git push origin main
+```
