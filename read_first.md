@@ -37,3 +37,14 @@ git add .
 git commit -m "feat: CI pipeline eklendi"
 git push origin main
 ```
+
+*İlk örneğin sonucunu 10 değil 15 yaparsan ve commitleyip pushlarsan kırmızıya dönecektir [maile bağla sonra]*
+
+#  YENI adım ci.yaml
+
+### Testler geçerse Docker imajını derle
+
+````
+- name: Docker İmajını Derle (Build)
+    run: docker build -t cicddemo-api:latest .
+````

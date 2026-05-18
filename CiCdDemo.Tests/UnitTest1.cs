@@ -12,6 +12,6 @@ public class BasicTests
 
         int sonuc = a + b;
 
-        Assert.Equal(15, sonuc); // Eğer sonuç 10 değilse test patlar (CI/CD durur)
+        Assert.Equal(10, sonuc); // Eğer sonuç 10 değilse test patlar (CI/CD durur)
     }
 }
