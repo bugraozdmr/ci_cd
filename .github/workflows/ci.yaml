@@ -38,3 +38,6 @@ jobs:
     # Adım 3.5: Yazdığımız testleri çalıştırır
     - name: Testleri Çalıştır
       run: dotnet test --no-build --verbosity normal
+
+    - name: Docker İmajını Derle (Build)
+      run: docker build -t cicddemo-api:latest .
