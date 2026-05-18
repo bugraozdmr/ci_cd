@@ -14,3 +14,18 @@
 
 # Test projesine, API projesinin referansını ver
 `dotnet add CiCdDemo.Tests/CiCdDemo.Tests.csproj reference CiCdDemo.Api/CiCdDemo.Api.csproj`
+
+# Bir repo oluştur ve commitle
+```
+git init
+git add .
+git commit -m "İlk commit: API ve Test projesi oluşturuldu"
+git branch -M main
+git remote add origin https://github.com/bugraozdmr/ci_cd.git
+git push -u origin main
+```
+
+> işine yarar `dotnet new gitignore`
+
+# ci.yaml
+*Tüm bu işlemler saniyeler içinde olup bitecek ve sonra o sunucu yok edilecek.*

@@ -1,0 +1,40 @@
+name: .NET Core CI Pipeline
+
+# Tüm bu işlemler saniyeler içinde olup bitecek ve sonra o sunucu yok edilecek.
+
+# 1. TETİKLEYİCİ: Bu süreç ne zaman çalışacak?
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# 2. GÖREVLER (JOBS): Yapılacak işler listesi
+jobs:
+  build-and-test:
+    # GitHub'ın bizim için ayağa kaldıracağı geçici işletim sistemi
+    runs-on: ubuntu-latest
+
+    # 3. ADIMLAR: Sunucu ayağa kalktıktan sonra sırasıyla ne yapacak?
+    steps:
+    # Adım 3.1: Proje kodlarını GitHub'dan bu geçici Ubuntu sunucusuna çeker
+    - name: Kodu Checkout Et
+      uses: actions/checkout@v4
+
+    # Adım 3.2: Sunucuya .NET Core SDK kurar
+    - name: .NET Ortamını Kur
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    # Adım 3.3: Projedeki bağımlılıkları (Nuget paketlerini) indirir
+    - name: Bağımlılıkları Yükle (Restore)
+      run: dotnet restore
+
+    # Adım 3.4: Projeyi derler
+    - name: Projeyi Derle (Build)
+      run: dotnet build --no-restore
+
+    # Adım 3.5: Yazdığımız testleri çalıştırır
+    - name: Testleri Çalıştır
+      run: dotnet test --no-build --verbosity normal
