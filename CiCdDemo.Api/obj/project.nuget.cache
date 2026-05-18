@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "P+GzDRpRkys=",
+  "success": true,
+  "projectFilePath": "/Users/bugra/Desktop/notebook/automation/CI_CD/labs/CiCdDemo/CiCdDemo.Api/CiCdDemo.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/bugra/.nuget/packages/microsoft.aspnetcore.openapi/10.0.0/microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "/Users/bugra/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
